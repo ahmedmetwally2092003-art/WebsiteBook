@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Righteous&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Bookmark</title>
+</head>
+<body>
+    <section class="interface py-5">
+    <div class="container d-flex flex-column justify-content-center align-items-center">
+        <div class="header">
+            <h1 class="py-2  position-relative z-1">
+                Bookmarker
+            </h1>
+        </div>
+        <div class="bookmark-body  w-100 p-3 py-4 mt-5 d-flex flex-column justify-content-center align-items-center gap-4 ">
+            <h2>
+                 <i class="fa-solid fa-bookmark" style="color: #3fa55b;"></i>
+                 Bookmark your favorite sites 
+                 <i class="fa-solid fa-bookmark" style="color: #b3ac4a;"></i>
+                </h2>
+                <div class="site-name w-100 d-flex flex-column justify-content-center">
+                <label for="siteName" class="pb-2  fw-semibold"> <i class=" fa-solid fa-book-bookmark px-2"></i>Site Name</label>
+                <input type="text" oninput="validateAllInputs(this)" id="siteName" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="alert alert-danger d-none" id="alertName">
+                  <p>Name Must start with capital letter min 3 max 5</p> 
+                </div>
+                </div>
+                <div class="site-Url w-100 d-flex flex-column justify-content-center">
+                <label for="bookmarkURL" class="pb-2  fw-semibold"> <i class="fa-solid fa-link px-2"></i>Site URL</label>
+                <input type="text" oninput="validateAllInputs(this)" id="bookmarkURL" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                <div class="alert alert-danger d-none" id="alertName">
+                  <p>Name Must start with capital letter min 3 max 5</p> 
+                </div>
+                </div>
+
+                <button type="button" onclick="addSite()" class="btn btn-danger px-5">Submit</button>
+        </div>
+        <table class="table mt-4" id="table">
+  <thead class="text-center">
+    <tr>
+      <th scope="col">Index</th>
+      <th scope="col">Website Name</th>
+      <th scope="col">Visit</th>
+      <th scope="col">Delete</th>
+    </tr>
+  </thead>
+  <tbody id="tablebody">
+    
+  </tbody>
+</table>
+    </div>
+    </section>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
